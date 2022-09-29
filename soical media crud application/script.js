@@ -6,22 +6,25 @@ const msg = document.querySelector("#msg");
 const createPosts = () => {
   let text = input.value;
   posts.insertAdjacentHTML(
-    "beforeend",
+    "afterbegin",
     `     <div>
   <p>${text}</p>
   <span class="options">
-    <i class="fa-solid fa-pen-to-square" onclick="editPosts()"></i>
-    <i class="fa-sharp fa-solid fa-trash" onclick="deletePosts()">
+    <i class="fa-solid fa-pen-to-square" onclick="editPosts(this)"></i>
+    <i class="fa-sharp fa-solid fa-trash" onclick="deletePosts(this)">
     </i>
   </span>
 </div>`
   );
+
+  form.reset();
 };
 
 const formValidation = () => {
   if (input.value === "") {
     msg.innerHTML = `Posts cannot be empty!`;
   } else {
+    msg.innerHTML = "";
     createPosts();
   }
 };
