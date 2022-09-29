@@ -1,9 +1,22 @@
 const form = document.querySelector("#form");
-const post = document.querySelector("#post");
+const posts = document.querySelector("#posts");
 const input = document.querySelector("#input");
 const msg = document.querySelector("#msg");
 
-const createPosts = () => {};
+const createPosts = () => {
+  let text = input.value;
+  posts.insertAdjacentHTML(
+    "beforeend",
+    `     <div>
+  <p>${text}</p>
+  <span class="options">
+    <i class="fa-solid fa-pen-to-square" onclick="editPosts()"></i>
+    <i class="fa-sharp fa-solid fa-trash" onclick="deletePosts()">
+    </i>
+  </span>
+</div>`
+  );
+};
 
 const formValidation = () => {
   if (input.value === "") {
