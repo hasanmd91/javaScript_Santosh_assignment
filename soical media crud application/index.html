@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/818da63515.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>crud application</title>
+  </head>
+  <body>
+    <section>
+      <h1>Social Media App</h1>
+      <div class="container">
+        <div class="left">
+          <form id="form">
+            <label for="input"> write your post here </label> <br /><br />
+            <textarea name="" id="input" cols="30" rows="10"></textarea
+            ><br /><br />
+            <button type="submit">post</button>
+          </form>
+          <div id="msg"></div>
+        </div>
+        <div id="right">
+          <h3>Your post here</h3>
+          <div id="posts">
+            <div>
+              <p>post 1</p>
+              <span class="options">
+                <i class="fa-solid fa-pen-to-square" onclick="editPosts()"></i>
+                <i class="fa-sharp fa-solid fa-trash" onclick="deletePosts()">
+                </i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
