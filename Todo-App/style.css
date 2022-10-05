@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  --border: rgb(15, 36, 92);
+  --todobackground: rgb(113, 138, 211);
+  --appbackgorund: rgb(101, 109, 224);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0 50px;
+  overflow: hidden;
+  background-color: rgb(246, 244, 241);
+}
+
+.todoApp {
+  width: 400px;
+  height: 600px;
+  border: 3px solid var(--border);
+  border-radius: 5px;
+  padding: 15px;
+  overflow-y: scroll;
+  background-color: var(--appbackgorund);
+}
+
+#addNew {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--todobackground);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fa-solid {
+  background-color: rgb(173, 205, 205);
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#tasks {
+  display: grid;
+  gap: 14px;
+}
+#tasks > div {
+  background-color: var(--todobackground);
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  padding: 15px;
+  display: grid;
+  gap: 10px;
+}
