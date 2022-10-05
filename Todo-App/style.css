@@ -65,3 +65,7 @@ body {
   display: flex;
   gap: 15px;
 }
+
+.options i {
+  cursor: pointer;
+}
