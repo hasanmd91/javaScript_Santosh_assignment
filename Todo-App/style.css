@@ -4,9 +4,9 @@
   padding: 0px;
 }
 :root {
-  --border: rgb(15, 36, 92);
-  --todobackground: rgb(113, 138, 211);
-  --appbackgorund: rgb(101, 109, 224);
+  --border: rgb(106, 125, 179);
+  --todobackground: rgb(208, 214, 231);
+  --appbackgorund: rgb(217, 218, 241);
 }
 
 html {
@@ -58,4 +58,10 @@ body {
   padding: 15px;
   display: grid;
   gap: 10px;
+}
+
+.options {
+  justify-self: center;
+  display: flex;
+  gap: 15px;
 }
