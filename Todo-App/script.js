@@ -36,7 +36,7 @@ form.addEventListener("submit", (e) => {
     date: dateInput.value,
     text: textInput.value,
   });
-
+  form.setAttribute;
   createTodo();
 
   localStorage.setItem("data", JSON.stringify(data));
@@ -51,6 +51,15 @@ const deleteTask = (e) => {
 };
 
 //edit Task
+
+const editTask = (e) => {
+  e.parentElement.parentElement.remove();
+  const selectedItem = e.parentElement.parentElement;
+
+  titleInput.value = selectedItem.children[0].innerHTML;
+  dateInput.value = selectedItem.children[1].innerHTML;
+  textInput.value = selectedItem.children[2].innerHTML;
+};
 
 // IIFE
 
