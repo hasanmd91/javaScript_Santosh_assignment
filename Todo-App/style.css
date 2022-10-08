@@ -4,10 +4,10 @@
   padding: 0px;
 }
 :root {
-  --border: rgb(106, 125, 179);
-  --todobackground: rgb(208, 214, 231);
-  --appbackgorund: rgb(217, 218, 241);
-  --buttonbackground: rgb(114, 116, 174);
+  --border: rgb(127, 147, 202);
+  --todobackground: rgb(193, 205, 237);
+  --appbackgorund: rgb(221, 221, 237);
+  --buttonbackground: rgb(195, 196, 226);
 }
 
 html {
@@ -19,16 +19,43 @@ body {
   margin: 0 50px;
   overflow: hidden;
   background-color: rgb(246, 244, 241);
+  background: linear-gradient(
+    -45deg,
+    rgb(68, 57, 224),
+    rgb(151, 151, 57),
+    rgb(122, 146, 181),
+    rgb(241, 188, 90)
+  );
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .todoApp {
-  width: 400px;
-  height: 600px;
+  margin: 50px auto;
+  max-width: 500px;
+  height: 700px;
   border: 3px solid var(--border);
   border-radius: 5px;
   padding: 15px;
   overflow-y: scroll;
   background-color: var(--appbackgorund);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.todoApp::-webkit-scrollbar {
+  width: 0;
 }
 
 #addNew {
@@ -69,4 +96,16 @@ body {
 
 .options i {
   cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .todoApp {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .todoApp {
+    width: 300px;
+  }
 }

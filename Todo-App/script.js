@@ -36,10 +36,11 @@ form.addEventListener("submit", (e) => {
     date: dateInput.value,
     text: textInput.value,
   });
-  form.setAttribute;
+  add.setAttribute("data-bs-dismiss", "modal");
   createTodo();
-
+  add.click();
   localStorage.setItem("data", JSON.stringify(data));
+  clearForm();
 });
 
 //delete function
@@ -59,6 +60,7 @@ const editTask = (e) => {
   titleInput.value = selectedItem.children[0].innerHTML;
   dateInput.value = selectedItem.children[1].innerHTML;
   textInput.value = selectedItem.children[2].innerHTML;
+  deleteTask(e);
 };
 
 // IIFE
@@ -67,3 +69,10 @@ const editTask = (e) => {
   data = JSON.parse(localStorage.getItem("data") || []);
   createTodo();
 })();
+
+// clear form
+const clearForm = () => {
+  titleInput.value = "";
+  dateInput.value = "";
+  textInput.value = "";
+};
