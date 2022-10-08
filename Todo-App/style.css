@@ -19,13 +19,7 @@ body {
   margin: 0 50px;
   overflow: hidden;
   background-color: rgb(246, 244, 241);
-  background: linear-gradient(
-    -45deg,
-    rgb(68, 57, 224),
-    rgb(151, 151, 57),
-    rgb(122, 146, 181),
-    rgb(241, 188, 90)
-  );
+  background: linear-gradient(-45deg, rgb(32, 35, 47), rgb(207, 210, 227));
   animation: gradient 10s ease infinite;
   background-size: 400% 400%;
 }
