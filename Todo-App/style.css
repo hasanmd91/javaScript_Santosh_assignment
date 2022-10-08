@@ -39,7 +39,8 @@ body {
 .todoApp {
   margin: 50px auto;
   max-width: 500px;
-  height: 700px;
+  min-height: 80vh;
+
   border: 3px solid var(--border);
   border-radius: 5px;
   padding: 15px;
